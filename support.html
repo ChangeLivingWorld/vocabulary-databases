@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadWeaver Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #F5F2EB 0%, #EDE9E1 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: 600;
+            color: #1A1A1A;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        .tagline {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        .section {
+            margin-bottom: 35px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1A1A1A;
+            margin-bottom: 15px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 15px 20px;
+            background: #F9F8F5;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            text-decoration: none;
+            color: #1A1A1A;
+            transition: all 0.2s ease;
+        }
+        .contact-item:hover {
+            background: #F0EFE9;
+            transform: translateY(-1px);
+        }
+        .contact-item svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+        .contact-text {
+            font-size: 15px;
+        }
+        .contact-label {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+        .contact-value {
+            font-weight: 500;
+            color: #1A1A1A;
+        }
+        .language-switch {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .lang-btn {
+            padding: 8px 16px;
+            border: 1px solid #E0DED8;
+            background: white;
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background: #1A1A1A;
+            color: white;
+            border-color: #1A1A1A;
+        }
+        .lang-btn:hover:not(.active) {
+            background: #F5F4F0;
+        }
+        .lang-zh { display: none; }
+        body[data-lang="zh"] .lang-en { display: none; }
+        body[data-lang="zh"] .lang-zh { display: block; }
+        body[data-lang="zh"] .lang-zh-inline { display: inline; }
+    </style>
+</head>
+<body data-lang="en">
+    <div class="container">
+        <!-- Language Switch -->
+        <div class="language-switch">
+            <button class="lang-btn active" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="zh">中文</button>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo">ReadWeaver</div>
+        <div class="tagline lang-en">Bilingual Reading, Naturally</div>
+        <div class="tagline lang-zh">双语阅读，自然流畅</div>
+
+        <!-- Contact Section -->
+        <div class="section">
+            <div class="section-title lang-en">Contact Us</div>
+            <div class="section-title lang-zh">联系我们</div>
+
+            <!-- Email -->
+            <a href="mailto:chawfrank@gmail.com" class="contact-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <div class="contact-text">
+                    <div class="contact-label lang-en">Email Support</div>
+                    <div class="contact-label lang-zh">邮件支持</div>
+                    <div class="contact-value">chawfrank@gmail.com</div>
+                </div>
+            </a>
+
+            <!-- Xiaohongshu (Chinese only) -->
+            <div class="contact-item lang-zh" style="cursor: default;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <div class="contact-text">
+                    <div class="contact-label">小红书</div>
+                    <div class="contact-value">ID: 1044078936</div>
+                </div>
+            </div>
+
+            <!-- Xiaohongshu App Link (Chinese only) -->
+            <a href="xhsdiscover://user/note/1044078936" class="contact-item lang-zh">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <div class="contact-text">
+                    <div class="contact-label">打开小红书 App</div>
+                    <div class="contact-value">点击跳转</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="section">
+            <div class="section-title lang-en">Common Questions</div>
+            <div class="section-title lang-zh">常见问题</div>
+
+            <div class="contact-item" style="cursor: default;">
+                <div class="contact-text" style="text-align: left;">
+                    <div class="contact-value lang-en" style="margin-bottom: 8px;">How to switch languages?</div>
+                    <div class="contact-value lang-zh" style="margin-bottom: 8px;">如何切换语言？</div>
+                    <div style="font-size: 13px; color: #666; line-height: 1.5;" class="lang-en">
+                        Long press on any paragraph to switch between Chinese and English.
+                    </div>
+                    <div style="font-size: 13px; color: #666; line-height: 1.5;" class="lang-zh">
+                        长按任意段落即可在中英文之间切换。
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-item" style="cursor: default;">
+                <div class="contact-text" style="text-align: left;">
+                    <div class="contact-value lang-en" style="margin-bottom: 8px;">Supported file formats?</div>
+                    <div class="contact-value lang-zh" style="margin-bottom: 8px;">支持的文件格式？</div>
+                    <div style="font-size: 13px; color: #666; line-height: 1.5;" class="lang-en">
+                        EPUB and TXT formats are supported.
+                    </div>
+                    <div style="font-size: 13px; color: #666; line-height: 1.5;" class="lang-zh">
+                        支持 EPUB 和 TXT 格式。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #EDE9E1;">
+            <p style="font-size: 12px; color: #999;" class="lang-en">© 2026 ReadWeaver. All rights reserved.</p>
+            <p style="font-size: 12px; color: #999;" class="lang-zh">© 2026 ReadWeaver. 版权所有</p>
+        </div>
+    </div>
+
+    <script>
+        // Language switching
+        const langButtons = document.querySelectorAll('.lang-btn');
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                document.body.dataset.lang = lang;
+                langButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.title = lang === 'zh' ? 'ReadWeaver 支持' : 'ReadWeaver Support';
+            });
+        });
+
+        // Auto-detect language
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('zh')) {
+            document.body.dataset.lang = 'zh';
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector('[data-lang="zh"]').classList.add('active');
+            document.title = 'ReadWeaver 支持';
+        }
+    </script>
+</body>
+</html>
